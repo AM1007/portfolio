@@ -96,7 +96,7 @@ const Navigation = () => {
   );
 };
 
-const RootLayoutInner = ({ children, invert }) => {
+const RootLayoutInner = ({ children }) => {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
   const openRef = useRef();
@@ -182,7 +182,9 @@ const RootLayoutInner = ({ children, invert }) => {
                     <SocialMedia className="mt-6" invert />
                   </div>
                   <div className="sm:border-l sm:border-transparent  text-start lg:pr-16 sm:text-end md:text-end">
-                    <Button invert={true}>Download CV</Button>
+                    <Button href="/CV.pdf" invert={true} download="CV.pdf">
+                      Download CV
+                    </Button>
                   </div>
                 </div>
               </Container>
