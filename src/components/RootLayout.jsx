@@ -182,7 +182,7 @@ const RootLayoutInner = ({ children }) => {
                     <SocialMedia className="mt-6" invert />
                   </div>
                   <div className="sm:border-l sm:border-transparent  text-start lg:pr-16 sm:text-end md:text-end">
-                    <Button href="/CV.pdf" invert={true} download="CV.pdf">
+                    <Button href="./CV.pdf" invert={true} download="CV.pdf">
                       Download CV
                     </Button>
                   </div>
