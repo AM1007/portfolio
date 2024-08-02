@@ -50,8 +50,6 @@ const SocialMedia = ({ className, invert = false }) => {
         invert ? "text-white" : "text-neutral-950",
         className
       )}
-      target={item.target}
-      rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
     >
       {SocialMediaProfiles.map((item) => (
         <li key={item.title}>
@@ -62,6 +60,8 @@ const SocialMedia = ({ className, invert = false }) => {
               "transition",
               invert ? "hover:text-neutral-200" : "hover:text-neutral-700"
             )}
+            target={item.target}
+            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
           >
             <item.icon className="h-6 w-6 fill-current" />
           </Link>
