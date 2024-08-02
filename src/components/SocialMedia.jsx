@@ -1,18 +1,14 @@
 import Link from "next/link";
 import clsx from "clsx";
-import {
-  BsFacebook,
-  BsTwitter,
-  BsGithub,
-  BsYoutube,
-  BsLinkedin,
-} from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
 
 export const SocialMediaProfiles = [
   {
-    title: "Youtube",
-    href: "https://www.youtube.com",
-    icon: BsYoutube,
+    title: "LinkedIn",
+    href: "https://www.linkedin.com/in/motko/",
+    icon: FaLinkedinIn,
     target: "_blank",
   },
   {
@@ -22,21 +18,15 @@ export const SocialMediaProfiles = [
     target: "_blank",
   },
   {
-    title: "Facebook",
-    href: "https://www.facebook.com/Noorlalu143/",
-    icon: BsFacebook,
-    target: "_blank",
-  },
-  {
-    title: "Instagram",
-    href: "https://www.linkedin.com/in/motko/",
-    icon: BsLinkedin,
+    title: "Telegram",
+    href: "https://t.me/Cookie_Cap",
+    icon: FaTelegramPlane,
     target: "_blank",
   },
   {
     title: "Twitter",
-    href: "https://twitter.com",
-    icon: BsTwitter,
+    href: "https://x.com/AndrewMotk5150",
+    icon: FaXTwitter,
     target: "_blank",
   },
 ];
@@ -56,12 +46,12 @@ const SocialMedia = ({ className, invert = false }) => {
           <Link
             href={item.href}
             aria-label={item.title}
+            target={item.target}
+            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
             className={clsx(
               "transition",
               invert ? "hover:text-neutral-200" : "hover:text-neutral-700"
             )}
-            target={item.target}
-            rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
           >
             <item.icon className="h-6 w-6 fill-current" />
           </Link>

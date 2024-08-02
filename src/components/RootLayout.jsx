@@ -31,7 +31,7 @@ const Header = ({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href={"/contact"} invert={invert}>
-            Contact us
+            Contacts
           </Button>
           <button
             ref={toggleRef}
@@ -85,18 +85,18 @@ const Navigation = () => {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">My Work</NavigationItem>
+        <NavigationItem href="/work">My Works</NavigationItem>
         <NavigationItem href="/about">About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">The Process</NavigationItem>
+        <NavigationItem href="/process">Process</NavigationItem>
         <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
     </nav>
   );
 };
 
-const RootLayoutInner = ({ children }) => {
+const RootLayoutInner = ({ children, invert }) => {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
   const openRef = useRef();
@@ -165,21 +165,24 @@ const RootLayoutInner = ({ children }) => {
             <Navigation />
             <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
-                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
+                <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-3 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      Location
                     </h2>
                     <Offices
                       invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
+                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-1"
                     />
                   </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
+                  <div className="sm:border-l sm:border-transparent sm:pl-0 lg:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
+                      Follow me
                     </h2>
                     <SocialMedia className="mt-6" invert />
+                  </div>
+                  <div className="sm:border-l sm:border-transparent  text-start lg:pr-16 sm:text-end md:text-end">
+                    <Button invert={true}>Download CV</Button>
                   </div>
                 </div>
               </Container>
@@ -211,5 +214,3 @@ const RootLayout = ({ children }) => {
 };
 
 export default RootLayout;
-
-// Temporary comment

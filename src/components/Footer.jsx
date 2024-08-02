@@ -22,7 +22,7 @@ const NewsletterForm = () => {
   return (
     <form className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
+        Sign up for the newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
         Subscribe to get the latest design news, articles, resources and
@@ -67,7 +67,7 @@ const Footer = () => {
             </Logo>
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © DevLaunch Inc. {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

@@ -16,6 +16,12 @@ const FooterNavigation = () => {
                   <Link
                     href={link.href}
                     className="transition hover:text-neutral-950"
+                    target={link.target}
+                    rel={
+                      link.target === "_blank"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                   >
                     {link.title}
                   </Link>
