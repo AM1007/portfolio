@@ -12,6 +12,7 @@ import clsx from "clsx";
 import Offices from "./Offices";
 import SocialMedia from "./SocialMedia";
 import Footer from "./Footer";
+import HeaderButton from "./HeaderButton";
 
 const Header = ({
   panelId,
@@ -30,9 +31,9 @@ const Header = ({
           <Logo invert={invert}>DevLaunch</Logo>
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href={"/src/app/contact/page.jsx"} invert={invert} sameTab>
+          <HeaderButton href={"/contact"} invert={invert}>
             Contacts
-          </Button>
+          </HeaderButton>
           <button
             ref={toggleRef}
             type="button"
