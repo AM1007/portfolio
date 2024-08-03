@@ -18,7 +18,7 @@ export const navigation = [
     ],
   },
   {
-    title: "Company",
+    title: "Content",
     links: [
       { title: "About Me", href: "/about" },
       { title: "Process", href: "/process" },

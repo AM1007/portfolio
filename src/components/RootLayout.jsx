@@ -30,7 +30,7 @@ const Header = ({
           <Logo invert={invert}>DevLaunch</Logo>
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href={"/contact"} invert={invert}>
+          <Button href={"/contact"} invert={invert} sameTab>
             Contacts
           </Button>
           <button

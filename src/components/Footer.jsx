@@ -25,8 +25,9 @@ const NewsletterForm = () => {
         Sign up for the newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
+        Subscribe now to receive cutting-edge news, insightful articles,
+        valuable resources, and inspiring content in both design and
+        development.
       </p>
       <div className="relative mt-6">
         <input

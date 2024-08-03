@@ -1,6 +1,14 @@
 import clsx from "clsx";
 
-const Button = ({ invert, href, className, children, download, ...props }) => {
+const Button = ({
+  invert,
+  href,
+  className,
+  children,
+  download,
+  sameTab,
+  ...props
+}) => {
   className = clsx(
     className,
     "inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition w-[124px] flex align-middle justify-center",
@@ -14,8 +22,8 @@ const Button = ({ invert, href, className, children, download, ...props }) => {
       href={href}
       className={className}
       download={download}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={sameTab ? undefined : "_blank"}
+      rel={sameTab ? undefined : "noopener noreferrer"}
       {...props}
     >
       {children}
