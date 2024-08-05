@@ -1,4 +1,5 @@
 import Clients from "@/components/Clients";
+import ContactSection from "@/components/ContactSection";
 import Container from "@/components/Container";
 import FadeIn from "@/components/FadeIn";
 import Services from "@/components/Services";
@@ -31,6 +32,7 @@ export default function Home() {
         sequi quibusdam natus ducimus!
       </Testimonials>
       <Services />
+      <ContactSection />
     </main>
   );
 }
